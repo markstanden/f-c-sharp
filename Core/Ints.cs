@@ -24,7 +24,7 @@ public class Ints
     /// <param name="nominator">The number to be divided.</param>
     /// <param name="denominator">The number to divide by.</param>
     /// <returns>The rounded up integer value</returns>
-    private static int IntCeiling(int nominator, int denominator)
+    private static int Ceiling(int nominator, int denominator)
         => (nominator + denominator - 1) / denominator;
 
 }

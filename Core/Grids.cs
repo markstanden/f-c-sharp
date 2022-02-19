@@ -1,8 +1,5 @@
 namespace F;
 
-using System.Collections.Generic;
-using System.Linq;
-
 public class Grids
 {
     /// <see href="https://github.com/markstanden/f-c-sharp"/>
@@ -14,7 +11,7 @@ public class Grids
     /// <param name="gridEnumerable">The nested IEnumerable grid to transpose</param>
     /// <typeparam name="T"></typeparam>
     /// <returns>A new Transposed nested IEnumerable grid</returns>
-    private static IEnumerable<IEnumerable<T>> Transpose<T>(this IEnumerable<IEnumerable<T>> gridEnumerable)
+    public static IEnumerable<IEnumerable<T>> Transpose<T>(this IEnumerable<IEnumerable<T>> gridEnumerable)
     {
         var grid = gridEnumerable.Select(row => row.ToArray())
                                  .ToArray();
@@ -22,14 +19,6 @@ public class Grids
                                    .Length)
                          .Select(col => grid.GetColumn(col));
     }
-
-
-
-
-
-
-
-
 
     /// <see href="https://github.com/markstanden/f-c-sharp"/>
     /// <summary>
@@ -40,9 +29,7 @@ public class Grids
     /// <param name="colNumber">The required column number from the grid</param>
     /// <typeparam name="T">The type of the actual contents of the grid</typeparam>
     /// <returns>An enumerable of the requested column.</returns>
-    private static IEnumerable<T> GetColumn<T>(this IReadOnlyList<T[]> grid, int colNumber)
+    public static IEnumerable<T> GetColumn<T>(this IReadOnlyList<T[]> grid, int colNumber)
         => Enumerable.Range(0, grid.Count)
                      .Select(row => grid[row][colNumber]);
-
-
 }
