@@ -4,4 +4,5 @@
 
 ## Functional Components built in C#
 
-A collection of reusable functional components built and improved as I learn C#, and functional programming concurrently.
+A collection of reusable functional components built and improved as I learn C#, and functional programming
+concurrently.
