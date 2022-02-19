@@ -1,4 +1,4 @@
-# f(c#)
+# f(C#)
 
 - (not f\*** C# ...honestly)
 
